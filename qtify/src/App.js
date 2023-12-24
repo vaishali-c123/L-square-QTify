@@ -1,29 +1,12 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import Button from './components/Button/button';
+import Search from './components/Search/search';
 
-
-const Navbar =() =>{
-  return(
-    <div className ="navbar">
-      <div className="left-section"></div>
-      <div className="center-section">
-        <input 
-        type="text"
-        placeholder='Search a songs of your choice'
-        className='search-bar'
-        />
-      </div>
-      <div className='right-section'>
-        <button className='feedback-button'>Give Feedback</button>
-      </div>
-    </div>
-   );
-};
 function App() {
   return (
     <div className="App">
-      
-     <Navbar/>
+      <Button>Give Feedback</Button>
+      <Search placeholder={"Search a album of your choice"}></Search>
     </div>
   );
 }
