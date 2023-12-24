@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './search.css';
+import styles from "./Search.Module.css";
 import {ReactComponent as SearchIcon} from  '../../assets/search-icon.svg'; // Valid for only svg files
 
 function Search({placeholder})
