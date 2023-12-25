@@ -1,13 +1,15 @@
-import React from "react";
-import Button from './components/Button/button';
-import Search from './components/Search/search';
+import React,{useState} from "react";
+import './App.css';
+import Navbar from './components/Navbar/Navbar';
+
+
 
 function App() {
+  const [searchData, useSearchData] = useState();
   return (
-    <div className="App">
-      <Button>Give Feedback</Button>
-      <Search placeholder={"Search a album of your choice"}></Search>
-    </div>
+    <>
+      <Navbar searchData={searchData}/>
+    </>
   );
 }
 
