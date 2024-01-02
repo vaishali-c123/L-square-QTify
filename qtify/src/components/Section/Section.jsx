@@ -22,7 +22,9 @@ export default function Section({title, data, type}){
                 ): (
                    <div className={styles.cardWrapper}>
                     {!carouselToggle ? (
+                        
                         <div className={styles.wrapper}>
+                            {/* {console.log(data)} */}
                             {data.map((ele) =>(
                                 <Card data={ele} type={type} />
                             ))}

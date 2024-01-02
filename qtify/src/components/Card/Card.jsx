@@ -1,18 +1,21 @@
-import {React,Link} from  'react';
+import {React} from  'react';
+import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 import {Tooltip, Chip} from "@mui/material";
 
 function Card({data, type})
 { 
+    console.log(data, type)
     const getCard = (type) =>
     {
         switch(type)
         {
-            case "album" :
+            case "albums" :
             {
                 const {image, title,follows,slug, songs} = data;
                 return(
                     <Tooltip title={`${songs.length}songs`} placement="top" arrow>
+                        
                         <Link to={`/album/${slug}`}>
                         <div className={styles.wrapper}>
                             <div className={styles.card}>
@@ -33,12 +36,12 @@ function Card({data, type})
                     </Tooltip>
                 )
             }
-            case "song" :
+            case "songs" :
             {
                  const {likes,image, title} = data;
                     return(
                     <div className={styles.wrapper}>
-                        <div className={styles.card}>
+                         <div className={styles.card}>
                             <img src={image} alt="song" loading="lazy"/>
                             <div className={styles.banner}>
                                 <div className={styles.pill}>
@@ -53,7 +56,7 @@ function Card({data, type})
                 );
             }
             default:
-                return <></>
+                return <>Default</>
         };
     }
     return getCard(type);
