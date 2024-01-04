@@ -56,7 +56,7 @@ function Card({data, type})
                 );
             }
             default:
-                return <>Default</>
+                return <></>
         };
     }
     return getCard(type);
