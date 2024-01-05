@@ -15,7 +15,7 @@ function HomePage(){
     <div className={styles.wrapper}>
         <Section title="Top Albums" data={topAlbums} type="albums"/>
         <Section title="New Albums" data={newAlbums} type="albums"/>
-        <Section title="Songs" data={songs} filterSource={fetchFilters} type={songs}/>
+        <Section title="Songs" data={songs} filterSource={fetchFilters} type="song"/>
     </div>
 
     </>

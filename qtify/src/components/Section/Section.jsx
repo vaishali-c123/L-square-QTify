@@ -6,10 +6,12 @@ import Carousel from "../Carousel/Carousel";
 import Filters from  "../Filters/Filters";
 
 
-export default function Section({title, data,filterSource, type}){
+export default function Section({title, data,filterSource, type})
+{
     const [filters, setFilters] =useState([{key:"all", label:"All"}]);
     const [selectedFilterIndex,setSelectedFilterIndex] = useState(0);
-    const [carouselToggle, setCarouselToggle] = useState(true);
+    
+    const [carouselToggle, setCarouselToggle] = useState(false);
 
     const handleToggle =() => {
         setCarouselToggle((prevState) => !prevState);
@@ -52,7 +54,7 @@ export default function Section({title, data,filterSource, type}){
                    <div className={styles.cardWrapper}>
                     {!carouselToggle ? (
                         <div className={styles.wrapper}>
-                            {/* {console.log(data)} */}
+                            {/* {console.log(type)} */}
                             {cardsToRender.map((ele) =>(
                                 <Card data={ele} type={type} />
                             ))}

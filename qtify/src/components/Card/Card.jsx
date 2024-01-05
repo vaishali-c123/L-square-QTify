@@ -8,6 +8,7 @@ function Card({data, type})
     console.log(data, type)
     const getCard = (type) =>
     {
+        // console.log(type);
         switch(type)
         {
             case "albums" :
@@ -15,7 +16,6 @@ function Card({data, type})
                 const {image, title,follows,slug, songs} = data;
                 return(
                     <Tooltip title={`${songs.length}songs`} placement="top" arrow>
-                        
                         <Link to={`/album/${slug}`}>
                         <div className={styles.wrapper}>
                             <div className={styles.card}>
@@ -31,14 +31,15 @@ function Card({data, type})
                             <div className={styles.titleWrapper}>
                                 <p>{title} </p>
                             </div>
-                        </div>
-                       </Link>
+                        </div></Link>
                     </Tooltip>
                 )
             }
-            case "songs" :
+            case "song" :
             {
+                 
                  const {likes,image, title} = data;
+                
                     return(
                     <div className={styles.wrapper}>
                          <div className={styles.card}>
